@@ -19,17 +19,28 @@ console.log(arrayPc);
 arrayUtente = [];
 while (arrayUtente.length < 16) {
   var numeroUtente = Number(prompt("Inserisci un numero da 1 a 100"));
+
   // L’utente non può inserire più volte lo stesso numero.
-  if(arrayUtente.indexOf(numeroUtente) === -1) {
+  if(arrayUtente.indexOf(numeroUtente) === -1 && arrayPc.indexOf(numeroUtente) === -1) {
     arrayUtente.push(numeroUtente);
-  } else {
+  } else if (arrayUtente.indexOf(numeroUtente) !== -1) {
     alert("Questo numero è già stato inserito. Scrivi un altro numero da 1 a 100");
+  }
+  // Se il numero è presente nella lista dei numeri generati, la partita termina, altrimenti si continua chiedendo all’utente un altro numero.
+  // La partita termina quando il giocatore inserisce un numero “vietato” o raggiunge il numero massimo possibile di numeri consentiti.
+
+  else {
+    alert("GAME OVER. Sei inciampato su una mina! BOOM");
+    break;
+  }
+  if (numeroUtente <= 0 || numeroUtente > 100) {
+    alert("Inserisci un numero valido");
+    arrayUtente.pop(numeroUtente);
   }
 }
 console.log(arrayUtente);
 
 
 
-// Se il numero è presente nella lista dei numeri generati, la partita termina, altrimenti si continua chiedendo all’utente un altro numero.
-// La partita termina quando il giocatore inserisce un numero “vietato” o raggiunge il numero massimo possibile di numeri consentiti.
+
 // Al termine della partita il software deve comunicare il punteggio, cioè il numero di volte che l’utente ha inserito un numero consentito.
