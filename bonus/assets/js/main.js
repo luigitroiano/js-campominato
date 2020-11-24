@@ -4,23 +4,23 @@ alert('CAMPO MINATO\n\nREGOLE DEL GIOCO:\nIl computer sceglierà randomicamente 
 var difficulty;
 
 while (true) {
-    var difficulty = Number(prompt('Scegli il livello di difficolta.\n\nPrincipiante - Digita: 0\nIntermedio - Digita: 1\nEsperto - Digita: 2\n'));
-    if (difficulty === 0 || difficulty === 1 || difficulty === 2) {
+    var difficulty = Number(prompt('Scegli il livello di difficolta.\n\nPrincipiante - Digita: 1\nIntermedio - Digita: 2\nEsperto - Digita: 3\n'));
+    if (difficulty === 1 || difficulty === 2 || difficulty === 3) {
         break;
     }
     alert("Inserisci un numero valido");
 }
 
 switch (difficulty) {
-  case 0:
+  case 1:
     min = 1;
     max = 100;
     break;
-  case 1:
+  case 2:
     min = 1;
     max = 80;
     break;
-  case 2:
+  case 3:
     min = 1;
     max = 50;
     break;
