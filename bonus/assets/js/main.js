@@ -4,7 +4,7 @@ alert('CAMPO MINATO\n\nREGOLE DEL GIOCO:\nIl computer sceglierà randomicamente 
 var difficulty;
 
 while (true) {
-    var difficulty = prompt('Scegli il livello di difficolta.\n\nPrincipiante - Digita: 1\nIntermedio - Digita: 2\nEsperto - Digita: 3\n');
+    var difficulty = prompt('Scegli il livello di difficolta.\n\nPrincipiante - Digita: 0\nIntermedio - Digita: 1\nEsperto - Digita: 2\n');
     if (difficulty === "0" || difficulty === "1" || difficulty === "2") {
         break;
     }
